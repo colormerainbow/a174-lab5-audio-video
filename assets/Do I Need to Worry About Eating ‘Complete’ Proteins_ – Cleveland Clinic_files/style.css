@@ -1,0 +1,498 @@
+body {
+  margin: 0;
+  padding:0
+}
+
+._300x250 {width:300px; height:250px;}
+._160x600 {width:160px; height:600px;}
+._300x600 {width:300px; height:600px;}
+._728x90 {width:728px; height:90px;}
+._320x50 {width:320px; height:50px;}
+
+#ad {
+  position: relative;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  opacity:100;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: 'motiva-sans', sans-serif;
+  opacity: 0;
+}
+
+#ad > * {
+  position: absolute;
+}
+
+#click-area {
+  border:1px solid #333;
+  box-sizing: border-box;
+  cursor: pointer;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+}
+
+#disclaimer-box {
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background-color: #FFF;
+  cursor: pointer;
+  display: none;
+  font-weight: 400;
+}
+#disclaimer-box > * {
+  position: absolute;
+}
+#disclaimer-title {
+  font-size: 12px;
+  top:10px;
+  left:10px;
+  font-weight: 600;
+}
+.underline {
+  text-decoration: underline;
+}
+
+#disclaimer-text {
+  font-size: 10px;
+  top:35px;
+  left:10px;
+  bottom:20px;
+  overflow-y: scroll;
+  width: calc(100% + 6px);
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+._728x90 #disclaimer-text {
+  bottom:12px;
+}
+._320x50 #disclaimer-text {
+  bottom:12px;
+}
+
+#disclaimer-button {
+  font-size: 9px;
+  color:#999;
+  cursor: pointer;
+  font-weight: 400;
+  text-align:center;
+}
+#disclaimer-button:hover {
+  color: #333;
+}
+
+#brand-logo {
+  height: auto;
+}
+.logo-placement {
+  width:100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.image-placement {
+  width:100%;
+  height:100%;
+}
+#brand-logo .logo-placement {
+  padding-top:18.5%;
+  background-image: url('https://gw-crs-assets.s3.amazonaws.com/staples/dynamic/logos/staples-logo-red.png');
+}
+
+#offer {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  height:10px;
+}
+
+#headline {width:100%; font-weight:700;}
+#subhead {width:100%; font-weight:400}
+
+#cta {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: #CE0000;
+}
+#cta-text {
+  max-width:90%;
+  color: #FFFFFF;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 1px;
+}
+
+#title,
+#dealer-info {
+  width:100%;
+}
+
+#cta:hover {
+  background-color: #000000;
+}
+
+#product-image {
+  display: flex;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.lifestyle #product-image {
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}
+
+.red {
+  color: #CC0000;
+}
+/* 300x250 STYLES */
+._300x250 #brand-logo {
+  width: 106px;
+  top: 214px;
+  left: 20px;
+}
+._300x250 #offer {
+  width: 270px;
+  top: 35px;
+  left:15px;
+  text-align: center;
+}
+
+.vertical ._300x250 #offer {
+  width: 140px;
+  top: 95px;
+  left:10px;
+  text-align: center;
+}
+._300x250 #subhead {
+  margin-top:5px;
+}
+._300x250 #cta {
+  width: 100px;
+  height: 25px;
+  top: 209px;
+  left: 184px;
+  font-size: 12px;
+  line-height: 12px;
+}
+._300x250 #disclaimer-button {
+  top: 235px;
+  left: 219px;
+  font-size: 9px;
+}
+._300x250 #product-image {
+  top: 80px;
+  height: 115px;
+  width:300px;
+}
+.vertical ._300x250 #product-image {
+  top: 10px;
+  height: 180px;
+  width:128px;
+  right:10px;
+  background-size: 140%;
+}
+
+.lifestyle ._300x250 #brand-logo {
+  width: 120px;
+  top: 12px;
+  left: 90px;
+}
+.lifestyle ._300x250 .gradient {
+  background: linear-gradient(180deg, rgba(255,255,255,0.97) 35%, rgba(255,255,255,0) 100%);
+  width:100%;
+  height:75px;
+}
+.lifestyle ._300x250 #offer {
+  width: 270px;
+  top: 183px;
+  left:15px;
+  text-align: center;
+}
+.lifestyle ._300x250 #product-image {
+  top:0px;
+  height: 160px;
+  width:300px;
+}
+.lifestyle ._300x250 #cta{
+  left:100px;
+  bottom:10px;
+  top: unset;
+}
+
+/* END 300x250 STYLES */
+
+/* 160x600 STYLES */
+._160x600 #brand-logo {
+  width: 110px;
+  top: 32px;
+  left: 25px;
+}
+._160x600 #offer {
+  width: 140px;
+  top: 140px;
+  left:10px;
+  text-align: center;
+}
+._160x600 #subhead {
+  margin-top:15px;
+}
+._160x600 #cta {
+  width: 117px;
+  height: 28px;
+  top: 528px;
+  left: 22px;
+  font-size: 12px;
+  line-height: 12px;
+}
+._160x600 #disclaimer-button {
+  top: 560px;
+  left: 50px;
+  font-size: 10px;
+}
+._160x600 #product-image {
+  top: 250px;
+  height: 200px;
+  width: 160px;
+}
+
+.vertical ._160x600 #product-image {
+  top: 250px;
+  height: 250px;
+  width: 160px;
+  background-size: 140%;
+}
+
+.lifestyle ._160x600 #brand-logo {
+  width: 100px;
+  top: 20px;
+  left: 30px;
+}
+.lifestyle ._160x600 .gradient {
+  background: linear-gradient(180deg, rgba(255,255,255,0.97) 35%, rgba(255,255,255,0) 100%);
+  width:100%;
+  height:125px;
+}
+.lifestyle ._160x600 #offer {
+  top: 470px;
+}
+.lifestyle ._160x600 #subhead {
+  margin-top:8px;
+}
+.lifestyle ._160x600 #product-image {
+  top:0px;
+  height: 400px;
+  width:160px;
+  background-position-x: 27%;
+}
+.lifestyle ._160x600 #cta{
+  bottom:20px;
+  top: unset;
+}
+
+/* END 160x600 STYLES */
+
+/* 300x600 STYLES */
+._300x600 #brand-logo {
+  width: 170px;
+  top: 27px;
+  left: 65px;
+}
+._300x600 #offer {
+  width: 240px;
+  top: 131px;
+  left:30px;
+
+  text-align: center;
+}
+._300x600 #subhead {
+  margin-top:15px;
+}
+._300x600 #cta {
+  width: 152px;
+  height: 39px;
+  top: 521px;
+  left: 74px;
+  font-size: 20px;
+  line-height: 20px;
+}
+._300x600 #disclaimer-button {
+  top: 565px;
+  width:60px;
+  left: 120px;
+  font-size: 11px;
+}
+._300x600 #product-image {
+  top: 225px;
+  height: 280px;
+  width: 300px;
+}
+.vertical ._300x600 #product-image {
+  top: 200px;
+  height: 300px;
+  width: 300px;
+  background-size: 110%;
+}
+
+.lifestyle ._300x600 #brand-logo {
+  width: 150px;
+  top: 25px;
+  left: 75px;
+}
+.lifestyle ._300x600 .gradient {
+  background: linear-gradient(180deg, rgba(255,255,255,0.97) 35%, rgba(255,255,255,0) 100%);
+  width:100%;
+  height:114px;
+}
+.lifestyle ._300x600 #offer {
+  top: 465px;
+}
+.lifestyle ._300x600 #subhead {
+  margin-top:8px;
+}
+.lifestyle ._300x600 #product-image {
+  top:0px;
+  height: 400px;
+  width:300px;
+}
+.lifestyle ._300x600 #cta{
+  bottom:20px;
+  top: unset;
+}
+
+/* END 300x600 STYLES */
+
+/* 728x90 STYLES */
+._728x90 #color-block {
+  width:150px;
+  height:90px;
+}
+._728x90 #brand-logo {
+  width: 143px;
+  top: 32px;
+  left: 31px;
+}
+._728x90 #offer {
+  width: 200px;
+  top: 40px;
+  left: 214px;
+  text-align: center;
+}
+._728x90 #subhead {
+  margin-top:2px;
+}
+._728x90 #cta {
+  width: 117px;
+  height: 30px;
+  bottom: 32px;
+  right: 12px;
+  font-size: 12px;
+  line-height: 12px;
+}
+._728x90 #disclaimer-button {
+  top: 62px;
+  left: 638px;
+  font-size: 10px;
+}
+._728x90 #product-image {
+  left: 426px;
+  height: 90px;
+  width: 153px;
+}
+
+.lifestyle ._728x90 #brand-logo {
+  width: 100px;
+  top: 36px;
+  left: 20px;
+}
+/* .lifestyle ._728x90 .gradient {
+  background: linear-gradient(180deg, rgba(255,255,255,0.97) 35%, rgba(255,255,255,0) 100%);
+  width:100%;
+  height:75px;
+} */
+.lifestyle ._728x90 #offer {
+  width: 260px;
+  top: 24px;
+  left:454px;
+  text-align: center;
+}
+.lifestyle ._728x90 #product-image {
+  left:142px;
+  height: 90px;
+  width:300px;
+}
+.lifestyle ._728x90 #cta{
+  bottom: 8px;
+  left: 527px;
+  height:24px;
+}
+
+/* END 728x90 STYLES */
+
+/* 320x50 STYLES */
+._320x50 #brand-logo {
+  width: 61px;
+  top: 20px;
+  left: 11px;
+}
+._320x50 #offer {
+  width: 129px;
+  top: 20px;
+  left: 91px;
+  text-align: center;
+}
+._320x50 #subhead {
+  /* display: none; */
+  margin-top: 2px;
+}
+._320x50 #cta {
+ display: none;
+}
+._320x50 #disclaimer-button {
+  top: 38px;
+  left: 25px;
+  font-size: 6px;
+}
+._320x50 #product-image {
+  right: 5px;
+  height: 50px;
+  width: 68px;
+}
+
+.lifestyle ._320x50 #brand-logo {
+  width: 54px;
+  top: 22px;
+  left: 8px;
+}
+
+.lifestyle ._320x50 #offer {
+  width: 96px;
+  top: 20px;
+  left:216px;
+  text-align: center;
+}
+.lifestyle ._320x50 #product-image {
+  left:70px;
+  height: 50px;
+  width:140px;
+}
+.lifestyle ._320x50 #cta{
+  bottom: 10px;
+  left: 527px;
+  height:24px;
+}
+/* END 320x50 STYLES */
+

@@ -1,0 +1,110 @@
+/* used starter code from tbennett and modified to fit the needs of Lab5 assignment */
+
+
+import { cueTimer } from "./modules/cuepoints.js";
+
+document.addEventListener("DOMContentLoaded", (e) => {
+
+    var myCues = [
+        { seconds: 2, callback: func1 },
+        { seconds: 14, callback: func10 },
+        { seconds: 39, callback: func2 },
+        { seconds: 42, callback: func3 },
+        { seconds: 61, callback: func4 },
+        { seconds: 78, callback: func5 },
+        { seconds: 110, callback: func6 },
+        { seconds: 156, callback: func7 },
+        { seconds: 163, callback: func8 },
+        { seconds: 172, callback: func9 },
+    ];
+
+    cueTimer.setup("vid", myCues);
+
+    const vid = document.querySelector("#vid");
+    const selectList = document.querySelector("#video_select");
+
+    selectList.addEventListener("change", (e) => {
+        selectVideo(e, vid);
+    });
+
+});
+
+
+
+//the custom callback functions to trigger when a cuepoint is hit.
+//You can code up whatever behavior you need in your own callbacks
+
+function func1() {
+    document.querySelector("#vid").style = "outline : 10px solid blue";
+}
+function func10() {
+    document.querySelector("#web").src =
+        "https://en.wikipedia.org/wiki/Protein";
+}
+function func2() {
+    let pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Proteins are chains of amino acids.</p>";
+    document.querySelector(".pop").classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
+}
+function func3() {
+    document.querySelector("#web").src =
+        "https://en.wikipedia.org/wiki/Essential_amino_acid";
+}
+
+function func4() {
+    document.querySelector("#web").src =
+        "../assets/cleveland_clinic.html";
+}
+
+function func5() {
+    document.querySelector("#web").src =
+        "https://www.webmd.com/food-recipes/protein";
+}
+
+function func6() {
+    document.querySelector("#web").src = "../assets/harvard_health.html";
+}
+
+function func7() {
+    const pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>RDA is 0.8g per kg (NOT per pound)!!</p>";
+    pop.classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
+    document.querySelector("#vid").style = "outline: 0px solid red";
+} 
+function func70() {
+    const pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Well, serious athletes need more protein.</p>";
+    pop.classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
+    document.querySelector("#vid").style = "outline: 0px solid red";
+} 
+
+function func8() {
+    const pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Don't overdo it. Calculate your protein needs.</p>";
+    pop.classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
+    document.querySelector("#vid").style = "outline: 0px solid red";
+    document.querySelector("#web").src = "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein";
+}
+function func9() {
+    const pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Note - Evidence is still not conclusive!</p>";
+    pop.classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
+    document.querySelector("#vid").style = "outline: 0px solid red";
+    document.querySelector("#web").src =
+        "../assets/PubMed.html";
+}
