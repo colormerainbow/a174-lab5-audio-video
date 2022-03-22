@@ -37,10 +37,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
 //the custom callback functions to trigger when a cuepoint is hit.
-//You can code up whatever behavior you need in your own callbacks
 
 function func1() {
-    document.querySelector("#vid").style = "outline : 10px solid blue";
+    document.querySelector("#vid").style = "outline : 10px solid #006d77";
 }
 function func10() {
     document.querySelector("#web").src =
@@ -106,7 +105,6 @@ function func7() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-    document.querySelector("#vid").style = "outline: 0px solid red";
 } 
 function func70() {
     const pop = document.querySelector(".pop");
@@ -115,7 +113,6 @@ function func70() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-    document.querySelector("#vid").style = "outline: 0px solid red";
 } 
 
 function func8() {
@@ -125,7 +122,6 @@ function func8() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-    document.querySelector("#vid").style = "outline: 0px solid red";
     document.querySelector("#web").src = "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein";
 }
 function func9() {
@@ -135,7 +131,6 @@ function func9() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-    document.querySelector("#vid").style = "outline: 0px solid red";
     document.querySelector("#web").src =
         "../assets/PubMed.html";
 }
