@@ -76,7 +76,7 @@ h4 {
     padding-right:1em;
   }
   
- seek:hover,
+ .seek:hover,
  .ctl_btn:hover {
     background-color: #a8dadc;
     font-weight: bold;
