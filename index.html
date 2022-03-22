@@ -1,107 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTDM174 Lab5 HTML5 Video with JS cuepoints (demo)</title>
     <link rel="stylesheet" href="css/main.css">
-	<script src="js/video_helpers.js" defer></script>
-	<script type="module" src="js/main.js" defer></script>
+    <script src="js/video_helpers.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
+
 <body>
-    <h1>HTML5 Video with JS synchronized cuepoints for demo</h1>
-    <h2>The Benefits of Protein on Weight Loss</h2>
+    <h1>The Benefits of Protein on Weight Loss</h1>
+    <h2>HTML5 Video with JS synchronized cuepoints for demo</h2>
     <!--
     <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is supported by conclusive evidence from clinical trials. The proper nutritional balance depends a lot your own personal situation and needs. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
 -->
-    
+
     <main id="container">
 
-		<section class="col1">
-          
-            <!--
-    <audio class="low-rider" controls>
-        <source src="a/low-rider.webm" type="audio/webm">
-        <source src="a/low-rider.mp3" type="audio/mp3">
-        <p>Here is a link to the audio file itself <a href="<a/low-rider.mp3">Audio File Here</a></p>
-    </audio>
+        <section class="col1">
 
-    <button id="stop">stop</button>
+            <video id="vid" width="352" controls>
+                <source src="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4"
+                    type="video/mp4" />
 
-    <video class="leverage" src="v/leverage-a-synergy.mp4" controls>
-        <source src="v/leverage-a-synergy.webm" type="video/webm">
-        <source src="v/leverage-a-synergy.mp4" type="video/mp4">
-        <p>Here is a link to the video file itself <a href="v/leverage-a-synergy.mp4">Video File Here</a></p>
-    </video>
--->
+                <source src="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm"
+                    type="video/webm" />
+                <source src="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv"
+                    type="video/ogg" />
 
-    <video id="vid" width="352" controls>
-        <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4" type="video/mp4" />
+                <track kind="captions" label="On" srclang="en" src="./captions/katalyst.vtt" default />
+                <!-- Expand to include spanish subtitles
+        <track kind="captions" label="On" srclang="es" src="./captions/katalystes.vtt" />
+  -->
+                <!-- fallback to text-->
+                <button id="stop">stop</button>
+                <h2>Protein for Leanness</h2>
+                <p>Here is a link to the video file itself <a
+                        href="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">Video
+                        File Here</a></p>
+                <p>Hi, I'm Kathy from Katalyst Fitness and Nutrition, and today I wanted to talk to you about protein
+                    and why it's so beneficial for weight loss.
+                </p>
+                <p>So, when you're trying to lose weight, protein is the key to getting you to your goal.</p>
+            </video>
 
-        <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm" type="video/webm" />
-        <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv" type="video/ogg" />
-    
-        <track kind="captions" label="On" srclang="en" src="./captions/katalyst.vtt" default />
-
-        <!-- final fallback to text; add files and text (do we need the / at end of line above?)-->
-        <h2>Protein for Leanness</h2>
-        <p>Hi, this should be some fallback content.
-        </p>
-        <p>Do we need much more text here if we included a VTT? or, include a transcript or link to it here
-        </p>
-        <p>Here is a link to the video file itself <a href="v/leverage-a-synergy.mp4">Video File Here</a></p>
-    </video>
-
-<div id="controls">
-    <form id="video_form">
-        <fieldset>
-            <input type="button" id="play_button" class="ctl_btn" onclick="playVideo(vid)" value="Play" />
-            <input type="button" id="pause_button" class="ctl_btn" onclick="pauseVideo(vid)" value="Pause" />
-            <input type="button" id="mute" class="ctl_btn" onclick="muteVid(vid)" value="Mute" />
-            <input type="button" id="unmute" class="ctl_btn" onclick="unmuteVid(vid)" value="Unmute" />
-            <input type="button" id="rewind" class="ctl_btn" onclick="seekVideo(vid, 0)" value="Beginning" />
-            <input type="button" id="end" class="ctl_btn" onclick="seekVideo(vid, 183)" value="End" />
-        </fieldset>
-        <fieldset>
-            <input type=button id="ff" class="ctl_btn" onclick="playRate(vid,2)" value="Fast Forward >>" />
-            <input type=button id="slo" class="ctl_btn" onclick="playRate(vid,.5)" value="Slo Mo >" />
-            <input type=button id="normal" class="ctl_btn" onclick="playRate(vid,1)" value="Normal >" />
-        </fieldset>
-        <fieldset>
-            <select id="video_select">
-                <option>Select a video to play...</option>
-                <option value="../assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">Katalyst (mp4)</option>
-                <option value="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm">Katalyst (webm)</option>
-                <option value="../assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">Katalyst (ogv)</option>
+            <div id="controls">
+                <form id="video_form">
+                    <fieldset>
+                        <input type="button" id="play_button" class="ctl_btn" onclick="playVideo(vid)" value="Play" />
+                        <input type="button" id="pause_button" class="ctl_btn" onclick="pauseVideo(vid)"
+                            value="Pause" />
+                        <input type="button" id="mute" class="ctl_btn" onclick="muteVid(vid)" value="Mute" />
+                        <input type="button" id="unmute" class="ctl_btn" onclick="unmuteVid(vid)" value="Unmute" />
+                        <input type="button" id="rewind" class="ctl_btn" onclick="seekVideo(vid, 0)"
+                            value="Beginning" />
+                        <input type="button" id="end" class="ctl_btn" onclick="seekVideo(vid, 183)" value="End" />
+                    </fieldset>
+                    <fieldset>
+                        <input type=button id="ff" class="ctl_btn" onclick="playRate(vid,2)" value="Fast Forward >>" />
+                        <input type=button id="slo" class="ctl_btn" onclick="playRate(vid,.5)" value="Slo Mo >" />
+                        <input type=button id="normal" class="ctl_btn" onclick="playRate(vid,1)" value="Normal >" />
+                    </fieldset>
+                    <fieldset>
+                        <select id="video_select">
+                            <option>Select a video to play...</option>
+                            <option
+                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">
+                                Katalyst (mp4)</option>
+                            <option
+                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm">
+                                Katalyst (webm)</option>
+                            <option
+                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">
+                                Katalyst (ogv)</option>
+                        </select>
+                        <!-- Expand to inclulde spanish subtitles 
+            <select id="lang_select">
+                <option>Select subtitle language...</option>
+                <option value="./captions/katalyst.vtt">English</option>
+                <option value="./captions/katalystes.vtt">Spanish</option>
             </select>
-        </fieldset>
-        <fieldset>
-            <p>Video Segments</p>
-            <input type="button" id="seek" onclick="seekVideo(vid, 50)" value="Essential Amino Acids" />
-            <input type="button" id="seek" onclick="seekVideo(vid, 69)" value="Weight Loss" />
-            <input type="button" id="seek" onclick="seekVideo(vid, 84)" value="Thermic Effect" />
-            <input type="button" id="seek" onclick="seekVideo(vid, 101)" value="Satiety Factor" />
-            <input type="button" id="seek" onclick="seekVideo(vid, 117)" value="Clinical Study" />
-            <input type="button" id="seek" onclick="seekVideo(vid, 136)" value="Protein Target" />
-        </fieldset>
+            -->
+                    </fieldset>
+                    <fieldset>
+                        <p>Video Segments</p>
+                        <input type="button" class="seek" onclick="seekVideo(vid, 50)" value="Essential Amino Acids" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 69)" value="Weight Loss" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 84)" value="Thermic Effect" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 101)" value="Satiety Factor" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 117)" value="Clinical Study" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 136)" value="Protein Target" />
+                    </fieldset>
 
-    </form>
-</div>
+                </form>
+            </div>
 
-    <div class="pop hide">
-        <p>Test This!</p>
-    </div>
-</section>
+            <div class="pop hide">
+                <p>Test This!</p>
+            </div>
+        </section>
 
-<section class="col2">
-    <iframe id="web" src=""></iframe>
-</section>
+        <section class="col2">
+            <h4>Placeholder</h4>
+            <iframe id="web" src=""></iframe>
+        </section>
 
-</main>
+    </main>
 
 
 
 
 </body>
+
 </html>

@@ -6,51 +6,50 @@
  */
 
 
-	function selectVideo(e, clip) 
-	{
-		clip.src = e.target.value;
-		clip.load();
-		playVideo(clip);
-	}
+function selectVideo(e, clip) {
+	clip.src = e.target.value;
+	clip.load();
+	playVideo(clip);
+}
+/* pending add for spanish subtitles, need debug
+function selectLang(e, clip) 
+{
+	clip.textTrack = e.target.value;
+	clip.load();
+	playVideo(clip);
+}
+*/
 
-	function playVideo(clip) 
-	{
-		clip.play();
-	}
+function playVideo(clip) {
+	clip.play();
+}
 
-	function seekVideo(clip, position) 
-	{
-		if(!position) position = 0;
-		clip.currentTime = position;
-		clip.play();
-	}
+function seekVideo(clip, position) {
+	if (!position) position = 0;
+	clip.currentTime = position;
+	clip.play();
+}
 
-	function pauseVideo(clip) 
-	{
-		clip.pause();
-	}
+function pauseVideo(clip) {
+	clip.pause();
+}
 
-	function muteVid(clip) 
-	{
-		clip.muted = true;
-	}
+function muteVid(clip) {
+	clip.muted = true;
+}
 
-	function unmuteVid(clip) 
-	{
-		clip.muted = false;
-	}
+function unmuteVid(clip) {
+	clip.muted = false;
+}
 
-	function onFinished(clip) 
-	{
-		clip.currentTime = 0;
-	}
+function onFinished(clip) {
+	clip.currentTime = 0;
+}
 
-	// rate can be a positive integer
-	// .5 is half speed, 1 is normal speed,
-	// 2 is double speed, etc.
-	//Only Safari supports negative values (backwards)
-	function playRate(clip, rate) 
-	{
-		clip.playbackRate = rate;
-	}
-
+// rate can be a positive integer
+// .5 is half speed, 1 is normal speed,
+// 2 is double speed, etc.
+//Only Safari supports negative values (backwards)
+function playRate(clip, rate) {
+	clip.playbackRate = rate;
+}
