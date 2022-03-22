@@ -40,6 +40,11 @@
 		clip.muted = false;
 	}
 
+	function stopVideo(clip)
+	{
+		clip.pause();
+		clip.currentTime = 0;
+	}
 	function onFinished(clip) 
 	{
 		clip.currentTime = 0;
