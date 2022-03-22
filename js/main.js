@@ -67,7 +67,7 @@ function func40() {
 }
 function func4() {
     document.querySelector("#web").src =
-        "../assets/cleveland_clinic.html";
+        "assets/cleveland_clinic.html";
 }
 
 function func5() {
