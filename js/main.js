@@ -11,12 +11,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
         { seconds: 41, callback: func2 },
         { seconds: 44, callback: func3 },
         { seconds: 57, callback: func40 },
-        { seconds: 61, callback: func4 },
+        { seconds: 61, callback: func4 }, 
         { seconds: 78, callback: func5 },
         { seconds: 99, callback: func50 },
         { seconds: 110, callback: func6 },
         { seconds: 125, callback: func60 },
-        { seconds: 134, callback: func61 },
         { seconds: 156, callback: func7 },
         { seconds: 163, callback: func70 },
         { seconds: 168, callback: func8 },
@@ -65,10 +64,11 @@ function func40() {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
 }
+
 function func4() {
     document.querySelector("#web").src =
-        "assets/cleveland_clinic.html";
-}
+        "https://en.wikipedia.org/wiki/Complete_protein";
+} 
 
 function func5() {
     document.querySelector("#web").src =
@@ -93,9 +93,6 @@ function func60() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-}
-function func61() {
-    document.querySelector("#web").src = "../assets/harvard_health.html";
 }
 
 function func7() {
@@ -131,6 +128,4 @@ function func9() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-    document.querySelector("#web").src =
-        "../assets/PubMed.html";
 }
