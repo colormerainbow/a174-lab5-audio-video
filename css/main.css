@@ -69,6 +69,11 @@
     padding-right:1em;
   }
   
+ #seek:hover,
+ .ctl_btn:hover {
+    background-color: #a8dadc;
+    font-weight: bold;
+  }
   
   .pop {
       position:absolute;
@@ -83,8 +88,6 @@
     opacity: 1;
     transition: all .1s;
   }
-  
-  
   
   .hide {
     opacity:0;

@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTDM174 Lab5 HTML5 Video Content with JS synchronized cuepoints for demo</title>
+    <title>ARTDM174 Lab5 HTML5 Video with JS cuepoints (demo)</title>
     <link rel="stylesheet" href="css/main.css">
 	<script src="js/video_helpers.js" defer></script>
 	<script type="module" src="js/main.js" defer></script>
 </head>
 <body>
-    <h1>ARTDM174 Practice Lab 5: HTML5 Video with JS synchronized cuepoints for demo</h1>
-    <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is entirely backed by evidence. Also, a lot depends on your own personal situation. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
+    <h1>HTML5 Video with JS synchronized cuepoints for demo</h1>
+    <h2>The Benefits of Protein on Weight Loss</h2>
+    <!--
+    <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is supported by conclusive evidence from clinical trials. The proper nutritional balance depends a lot your own personal situation and needs. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
+-->
     
     <main id="container">
 
@@ -53,30 +56,36 @@
 <div id="controls">
     <form id="video_form">
         <fieldset>
-            <input type="button" id="play_button" onclick="playVideo(vid)" value="Play" />
-            <input type="button" id="pause_button" onclick="pauseVideo(vid)" value="Pause" />
-            <input type="button" id="mute" onclick="muteVid(vid)" value="Mute" />
-            <input type="button" id="unmute" onclick="unmuteVid(vid)" value="Unmute" />
-            <input type="button" id="rewind" onclick="seekVideo(vid, 0)" value="Beginning" />
-            <input type="button" id="end" onclick="seekVideo(vid, 57)" value="End" />
-            <input type="button" id="seek" onclick="seekVideo(vid, 14)" value="Go to Statistics" />
+            <input type="button" id="play_button" class="ctl_btn" onclick="playVideo(vid)" value="Play" />
+            <input type="button" id="pause_button" class="ctl_btn" onclick="pauseVideo(vid)" value="Pause" />
+            <input type="button" id="mute" class="ctl_btn" onclick="muteVid(vid)" value="Mute" />
+            <input type="button" id="unmute" class="ctl_btn" onclick="unmuteVid(vid)" value="Unmute" />
+            <input type="button" id="rewind" class="ctl_btn" onclick="seekVideo(vid, 0)" value="Beginning" />
+            <input type="button" id="end" class="ctl_btn" onclick="seekVideo(vid, 183)" value="End" />
+        </fieldset>
+        <fieldset>
+            <input type=button id="ff" class="ctl_btn" onclick="playRate(vid,2)" value="Fast Forward >>" />
+            <input type=button id="slo" class="ctl_btn" onclick="playRate(vid,.5)" value="Slo Mo >" />
+            <input type=button id="normal" class="ctl_btn" onclick="playRate(vid,1)" value="Normal >" />
         </fieldset>
         <fieldset>
             <select id="video_select">
                 <option>Select a video to play...</option>
-                <option value="../assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">Protein(mp4)</option>
-                <option value="../assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">Protein(ogv)</option>
-                <option value="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm">Protein(webm)</option>
+                <option value="../assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">Katalyst (mp4)</option>
+                <option value="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm">Katalyst (webm)</option>
+                <option value="../assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">Katalyst (ogv)</option>
             </select>
         </fieldset>
         <fieldset>
-            <label>Currently, rewind only works in Safari
-                <input type=button id="rw" onclick="playRate(vid,-1)" value="&lt; &lt;rewind" />
-            </lable>
-            <input type=button id="ff" onclick="playRate(vid,2)" value="fast forward >>" />
-            <input type=button id="slo" onclick="playRate(vid,.5)" value="slo mo >" />
-            <input type=button id="normal" onclick="playRate(vid,1)" value="normal >" />
+            <p>Video Segments</p>
+            <input type="button" id="seek" onclick="seekVideo(vid, 50)" value="Essential Amino Acids" />
+            <input type="button" id="seek" onclick="seekVideo(vid, 69)" value="Weight Loss" />
+            <input type="button" id="seek" onclick="seekVideo(vid, 84)" value="Thermic Effect" />
+            <input type="button" id="seek" onclick="seekVideo(vid, 101)" value="Satiety Factor" />
+            <input type="button" id="seek" onclick="seekVideo(vid, 117)" value="Clinical Study" />
+            <input type="button" id="seek" onclick="seekVideo(vid, 136)" value="Protein Target" />
         </fieldset>
+
     </form>
 </div>
 
